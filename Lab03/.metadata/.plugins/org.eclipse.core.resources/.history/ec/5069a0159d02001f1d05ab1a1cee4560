@@ -1,0 +1,10 @@
+package Wrapper;
+
+import Aims.DigitalVideoDisc;
+
+public class ObjectWrapper {
+	DigitalVideoDisc object;
+	public ObjectWrapper(DigitalVideoDisc object) {
+		this.object = object;
+	}
+}

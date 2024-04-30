@@ -1,0 +1,45 @@
+package Aims;
+
+import java.nio.file.WatchEvent;
+import java.util.*;
+import Wrapper.ObjectWrapper;
+
+public class TestPassingParameter {
+    public static void main(String[] args) {
+        DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
+        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
+
+        swap(jungleDVD, cinderellaDVD);
+        System.out.println("jungle dvd title: " + jungleDVD.getTitle());
+        System.out.println("cinderella dvd title: " + cinderellaDVD.getTitle());
+//        changeTitle(jungleDVD, cinderellaDVD.getTitle());
+//        System.out.println("jungle dvd title: " + jungleDVD.getTitle());
+        
+        System.out.println("Testing changing object");
+        ObjectWrapper obj1 = new ObjectWrapper(jungleDVD);
+        ObjectWrapper obj2 = new ObjectWrapper(cinderellaDVD);
+        swap(obj1, obj2);
+        System.out.println("After swapping: ");
+        System.out.println("jungle dvd title: " + obj1.object.getTitle());
+        System.out.println("cinderella dvd title: " + obj2.object.getTitle());
+    }
+
+    public static void swap(DigitalVideoDisc WO1, DigitalVideoDisc WO2) {
+        DigitalVideoDisc temp = WO1;
+        WO1 = WO2;
+        WO2 = temp;
+    }
+
+    public static void changeTitle(DigitalVideoDisc dvd, String title) {
+        String oldTitle = dvd.getTitle();
+        dvd.setTitle(title);
+        dvd = new DigitalVideoDisc(oldTitle);
+    }
+
+    public static void swap(ObjectWrapper obj1, ObjectWrapper obj2) {
+    	DigitalVideoDisc temp = obj1.object;
+    	obj1.object = obj2.object;
+    	obj2.object = temp;
+    }
+}
+

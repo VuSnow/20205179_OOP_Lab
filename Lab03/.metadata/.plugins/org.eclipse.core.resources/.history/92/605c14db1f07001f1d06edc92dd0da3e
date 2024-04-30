@@ -1,0 +1,11 @@
+package hust.soict.test.cart.CartTest;
+import hust.soict.aims.disc.*;
+
+public class CartTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package Wrapper;
+
+import hust.soict.disc.DigitalVideoDisc;
+
+public class ObjectWrapper {
+	public DigitalVideoDisc object;
+	public ObjectWrapper(DigitalVideoDisc object) {
+		this.object = object;
+	}
+}
